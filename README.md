@@ -79,5 +79,28 @@ These instructions will help you set up the project on your local machine for de
 	```bash
 	python run.py
 	```
-The API will be available at http://localhost:____.
+The API will be available at http://localhost:Port.
 
+---
+
+### API Endpoints
+
+* **POST /clean**:
+Accepts a CSV file, cleans the data, and returns a cleaned CSV file for download.
+
+- URL: /clean
+- Method: POST
+- Content-Type: multipart/form-data
+- Request Parameters:
+	* file: The CSV file to be cleaned (uploaded as form-data).
+- Response:
+	* Status Code: 200 OK
+	* Content-Type: application/octet-stream
+	* Body: Returns the cleaned CSV file as a downloadable attachment.
+- Error Responses:
+	* 400 Bad Request: If no file is provided or the file is not a CSV.
+
+Example Request Using curl:
+```bash
+curl -X POST -F 'file=@path/to/yourfile.csv' http://localhost:5000/clean -o cleaned_data.csv
+```
