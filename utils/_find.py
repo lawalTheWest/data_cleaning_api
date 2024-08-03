@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-''' File I/O for word search '''
+'''
+    the shebang line above will be removed
+    as this is not a standalone script.
+    File I/O for word search
+'''
 
 import argparse
 
