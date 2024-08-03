@@ -104,3 +104,7 @@ Example Request Using curl:
 ```bash
 curl -X POST -F 'file=@path/to/yourfile.csv' http://localhost:5000/clean -o cleaned_data.csv
 ```
+
+### License
+
+---
